@@ -1,5 +1,7 @@
 "use client";
 
+import Card from "@/components/Card";
+
 const Values = [
   {
     title: "Onions",
@@ -48,7 +50,7 @@ export default function Home() {
     <main className="p-10 h-screen">
       <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-10">
         {Values.map((value, index) => (
-          <Box key={index} title={value.title} quantity={value.quantity} />
+          <Card key={index} title={value.title} quantity={value.quantity} />
         ))}
       </div>
       <div
@@ -60,17 +62,3 @@ export default function Home() {
     </main>
   );
 }
-
-type BoxProps = {
-  title: string;
-  quantity: number;
-};
-
-export const Box = ({ title, quantity }: BoxProps) => {
-  return (
-    <div className="py-3 text-center border border-white rounded-md">
-      <h1>{title}</h1>
-      <p className="mt-2 flex justify-end px-4">{quantity}</p>
-    </div>
-  );
-};
