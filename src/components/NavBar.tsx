@@ -6,7 +6,13 @@ export default function Navbar() {
     <>
       <div className="flex justify-between border-b border-secondary px-4 py-4 items-center text-primary">
         <div>
-          <Image width={48} height={48} src="/navLogo.png" alt="Navbar Logo" />
+          <Image
+            width={48}
+            height={48}
+            src="/navLogo.png"
+            alt="Navbar Logo"
+            priority
+          />
         </div>
         <div>
           <Avatar
