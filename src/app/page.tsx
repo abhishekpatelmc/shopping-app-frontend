@@ -5,39 +5,18 @@ import Card from "@/components/Card";
 const Values = [
   {
     title: "Onions",
-    quantity: 12,
   },
   {
     title: "Tomatoes",
-    quantity: 6,
   },
   {
     title: "Potatoes",
-    quantity: 8,
   },
   {
     title: "Carrots",
-    quantity: 4,
   },
   {
     title: "Cucumbers",
-    quantity: 2,
-  },
-  {
-    title: "Peppers",
-    quantity: 4,
-  },
-  {
-    title: "Garlic",
-    quantity: 5,
-  },
-  {
-    title: "Ginger",
-    quantity: 2,
-  },
-  {
-    title: "Lettuce",
-    quantity: 9,
   },
 ];
 
@@ -50,7 +29,7 @@ export default function Home() {
     <main className="p-10 h-screen">
       <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-10">
         {Values.map((value, index) => (
-          <Card key={index} title={value.title} quantity={value.quantity} />
+          <Card key={index} title={value.title} />
         ))}
       </div>
       <div
