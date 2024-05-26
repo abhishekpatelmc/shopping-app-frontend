@@ -1,6 +1,7 @@
 "use client";
 
-import Card from "@/components/Card";
+import Card from "@/components/common/Card";
+import { useState } from "react";
 
 const Values = [
   {
@@ -21,14 +22,16 @@ const Values = [
 ];
 
 export default function Home() {
+  const [state, setState] = useState(Values);
   const handleClick = () => {
+    setState([...state, { title: "Tomatoes" }]);
     console.log("clicked");
   };
 
   return (
     <main className="p-10 h-screen">
       <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-10">
-        {Values.map((value, index) => (
+        {state.map((value, index) => (
           <Card key={index} title={value.title} />
         ))}
       </div>
